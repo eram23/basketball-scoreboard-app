@@ -1,43 +1,19 @@
-const homeScore = document.getElementById("home-score")
-const guestScore = document.getElementById("guest-score")
-let homeSum = 0
-let guestSum = 0
+const homeScoreEl = document.getElementById("home-score")
+const awayScoreEl = document.getElementById("away-score")
+let homeScore = 0
+let awayScore = 0
 
-// HOME FUNCTIONS
-function plusOneHome() {
-    homeSum++
-    homeScore.textContent = homeSum
-}
-
-function plusTwoHome() {
-    homeSum += 2
-    homeScore.textContent = homeSum
-}
-
-function plusThreeHome() {
-    homeSum += 3
-    homeScore.textContent = homeSum
-}
-
-// GUEST FUNCTIONS
-function plusOneGuest() {
-    guestSum++
-    guestScore.textContent = guestSum
-}
-
-function plusTwoGuest() {
-    guestSum += 2
-    guestScore.textContent = guestSum
-}
-
-function plusThreeGuest() {
-    guestSum += 3
-    guestScore.textContent = guestSum
+function incrementScore(team, score) {
+    if (team === "home") {
+        homeScore += score
+        homeScoreEl.textContent = homeScore
+    } else if (team === "away") {
+        awayScore += score
+        awayScoreEl.textContent = awayScore
+    }
 }
 
 function newGame() {
-    homeSum = 0
-    guestSum = 0
-    guestScore.textContent = guestSum
-    homeScore.textContent = homeSum
+    awayScoreEl.textContent = 0
+    homeScoreEl.textContent = 0
 }
