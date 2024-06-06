@@ -2,9 +2,6 @@ const homeScore = document.getElementById("home-score")
 const guestScore = document.getElementById("guest-score")
 let homeSum = 0
 let guestSum = 0
-// create 3 functions for each button so that the buttons increment the scores
-// whenever they are pressed
-// might have to create seperate functions for the seperate scores
 
 // HOME FUNCTIONS
 function plusOneHome() {
